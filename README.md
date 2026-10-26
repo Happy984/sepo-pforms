@@ -19,11 +19,6 @@ Sepo Forms walks people through a form one section at a time. Every response sta
 ![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759b)
 ![PHP](https://img.shields.io/badge/PHP-8.1%2B-777bb4)
 ![License](https://img.shields.io/badge/license-GPL--2.0--or--later-blue)
-https://edu.sepodesk.com/sponsor/projects-maintenance/
-![Version](https://img.shields.io/badge/version-1.0.0-0b3d33)
-![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759b)
-![PHP](https://img.shields.io/badge/PHP-8.1%2B-777bb4)
-![License](https://img.shields.io/badge/license-GPL--2.0--or--later-blue)
 
 
 ## Contents
