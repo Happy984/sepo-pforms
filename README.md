@@ -105,7 +105,7 @@ Open **Forms → Responses**, or a form's **Responses** link. It shows:
 3. Go to **Plugins** and activate **Sepo Forms**.
 
 > [!NOTE]
-> GitHub's **Code → Download ZIP** names the folder after the branch, for example `sepo-forms-main`. Rename it to `sepo-forms` before uploading.
+> GitHub's **Code → Download ZIP** names the folder after the branch, for example `sepo-pforms-main`. Rename it to `sepo-forms` before uploading.
 
 ## Getting started
 
