@@ -145,12 +145,12 @@ final class Rest
         }
 
         try {
-            $files = Files::store($formId, $s, isset($_FILES['spf_files']) && is_array($_FILES['spf_files']) ? $_FILES['spf_files'] : []); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput -- checked per file
+            $files = Files::store($formId, $s, (array) ($r->get_file_params()['spf_files'] ?? []));
             $record = Submissions::add($formId, FormDefinition::cleanAnswers($form['questions'], $answers), $userId, [
                 'email'      => $email,
                 'meta'       => $files ? ['files' => $files] : [],
                 'ip'         => self::ip(),
-                'user_agent' => (string) ($_SERVER['HTTP_USER_AGENT'] ?? ''), // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+                'user_agent' => sanitize_text_field((string) $r->get_header('user_agent')),
             ]);
         } catch (\RuntimeException $e) {
             return self::error($e->getMessage(), 422);

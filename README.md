@@ -1,6 +1,14 @@
 # Sepo Forms
 
+By [Euneolink Solutions](https://edu.sepodesk.com/) · Plugin page: [edu.sepodesk.com](https://edu.sepodesk.com/)
+
 Multi-step forms for WordPress, with sections, file uploads, response charts and CSV export.
+
+![Version](https://img.shields.io/badge/version-1.0.4-0b3d33)
+![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759b)
+![PHP](https://img.shields.io/badge/PHP-8.1%2B-777bb4)
+![License](https://img.shields.io/badge/license-GPL--2.0--or--later-blue)
+
 Sepo Forms walks people through a form one section at a time. Every response stays in your own database. Form managers get a summary of the answers with charts, a searchable table and a CSV download. It runs on WordPress alone.
 
 <p align="center">
@@ -14,12 +22,6 @@ Sepo Forms walks people through a form one section at a time. Every response sta
   <br />
   <strong>Every contribution makes a difference. Thank you for supporting our work!</strong>
 </p>
-
-![Version](https://img.shields.io/badge/version-1.0.0-0b3d33)
-![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759b)
-![PHP](https://img.shields.io/badge/PHP-8.1%2B-777bb4)
-![License](https://img.shields.io/badge/license-GPL--2.0--or--later-blue)
-
 
 ## Contents
 
@@ -63,6 +65,7 @@ Sepo Forms walks people through a form one section at a time. Every response sta
   - set a size limit.
 
   Files are kept out of the public uploads listing, and only form managers can download them.
+
 - A thank-you message, or a page to send people to after they submit.
 - A sort order for the forms list.
 
@@ -84,10 +87,10 @@ Open **Forms → Responses**, or a form's **Responses** link. It shows:
 
 ## Requirements
 
-| | Minimum |
-|---|---|
-| WordPress | 6.0 |
-| PHP | 8.1 |
+|           | Minimum |
+| --------- | ------- |
+| WordPress | 6.0     |
+| PHP       | 8.1     |
 
 ## Installation
 
@@ -118,10 +121,10 @@ To use a different page for the forms list, choose it under **Forms → Settings
 
 ## Shortcodes, blocks and widgets
 
-| Shortcode | What it shows |
-|---|---|
-| `[sepo_form id="123"]` or `[sepo_form slug="course-feedback"]` | One form. Add `title="no"` to hide its heading. |
-| `[sepo_forms]` | The forms list. Options: `per_page="12"`, and `view="grid"` or `view="list"`. |
+| Shortcode                                                      | What it shows                                                                 |
+| -------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `[sepo_form id="123"]` or `[sepo_form slug="course-feedback"]` | One form. Add `title="no"` to hide its heading.                               |
+| `[sepo_forms]`                                                 | The forms list. Options: `per_page="12"`, and `view="grid"` or `view="list"`. |
 
 The plugin also includes:
 
@@ -174,18 +177,39 @@ location ^~ /wp-content/uploads/sepo-forms-private/ { deny all; }
 
 ## For developers
 
-| Hook | Type | Arguments / purpose |
-|---|---|---|
-| `sepo_forms_submitted` | action | `( array $record, int $formId )` runs after a response is saved. |
-| `sepo_forms_submission_deleted` | action | `( string $id, int $formId )` runs after a response is removed. |
-| `sepo_forms_templates` | filter | Adds or changes the builder templates. |
-| `sepo_forms_upload_mimes` | filter | Sets the file types allowed for uploads. |
-| `sepo_forms_ip` | filter | Gives the respondent's IP, for sites behind a proxy. |
+| Hook                                 | Type   | Arguments / purpose                                                        |
+| ------------------------------------ | ------ | -------------------------------------------------------------------------- |
+| `sepo_forms_submitted`               | action | `( array $record, int $formId )` runs after a response is saved.           |
+| `sepo_forms_submission_deleted`      | action | `( string $id, int $formId )` runs after a response is removed.            |
+| `sepo_forms_templates`               | filter | Adds or changes the builder templates.                                     |
+| `sepo_forms_upload_mimes`            | filter | Sets the file types allowed for uploads.                                   |
+| `sepo_forms_ip`                      | filter | Gives the respondent's IP, for sites behind a proxy.                       |
 | `sepo_forms_show_title_on_form_page` | filter | Return `true` to show the form's own heading as well as the theme's title. |
 
 ## Changelog
 
+### 1.0.4
+
+- The plugin is by Euneolink Solutions. Its plugin page and author page are edu.sepodesk.com.
+
+### 1.0.3
+
+- Readme: screenshots and their captions for the plugin directory.
+
+### 1.0.2
+
+- Admin screens: settings shown as cards, lists in a rounded frame, rounded fields and buttons, pill-shaped tabs and filters, and notices on tinted backgrounds.
+
+### 1.0.1
+
+- Uploaded files are stored and served through the WordPress file-system API.
+- Uninstall clean-up runs inside a function, so it leaves no global variables behind.
+- Added the languages folder with a translation template.
+- Passes the WordPress Plugin Check: translator comments on every string with placeholders, escaped output, sanitised request data and documented database access to the plugin's own tables.
+- Tested up to WordPress 7.1.
+
 ### 1.0.0
+
 - First release.
 
 ## License

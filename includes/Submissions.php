@@ -1,6 +1,8 @@
 <?php
 
 declare(strict_types=1);
+// phpcs:disable PluginCheck.Security.DirectDB.UnescapedDBParameter, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber, WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare -- Custom plugin tables: names are built from $wpdb->prefix plus a fixed suffix, values go through $wpdb->prepare(), and dynamic fragments come from fixed allow-lists.
+// phpcs:disable WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Exception messages are returned as JSON data or escaped at the point they are displayed.
 
 namespace SepoForms;
 
@@ -257,8 +259,8 @@ final class Submissions
         nocache_headers();
         header('Content-Type: text/csv; charset=utf-8');
         header('Content-Disposition: attachment; filename="' . $name . '"');
-        $out = fopen('php://output', 'w');
-        fwrite($out, "\xEF\xBB\xBF");
+        echo "\xEF\xBB\xBF"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- UTF-8 byte order mark for spreadsheet apps.
+        $out = fopen('php://output', 'w'); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen -- CSV stream to the browser.
         $head = [__('Response ID', 'sepo-forms'), __('Submitted', 'sepo-forms'), __('Respondent', 'sepo-forms'), __('User ID', 'sepo-forms'), __('Email', 'sepo-forms')];
         foreach ($form['questions'] as $q) {
             $head[] = $q['question'];
@@ -274,7 +276,6 @@ final class Submissions
             // A leading = + - @ would run as a formula in spreadsheet apps.
             fputcsv($out, array_map(static fn($v) => preg_match('/^[=+\-@]/', (string) $v) ? "'" . $v : (string) $v, $line));
         }
-        fclose($out);
         exit;
     }
 

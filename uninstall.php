@@ -9,37 +9,41 @@
 
 defined('WP_UNINSTALL_PLUGIN') || exit;
 
-global $wpdb;
+/** Remove the plugin's data when the site owner asked for it. */
+function sepo_forms_uninstall(): void
+{
+    global $wpdb;
 
-$settings = get_option('sepo_forms_settings', []);
-$delete = is_array($settings) && !empty($settings['delete_on_uninstall']);
+    $settings = get_option('sepo_forms_settings', []);
+    $delete = is_array($settings) && !empty($settings['delete_on_uninstall']);
 
-$wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE '\\_transient\\_spf\\_%' OR option_name LIKE '\\_transient\\_timeout\\_spf\\_%'"); // phpcs:ignore WordPress.DB
+    $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE '\\_transient\\_spf\\_%' OR option_name LIKE '\\_transient\\_timeout\\_spf\\_%'"); // phpcs:ignore WordPress.DB
 
-if (!$delete) {
-    return;
-}
-
-$ids = $wpdb->get_col($wpdb->prepare("SELECT ID FROM {$wpdb->posts} WHERE post_type = %s", 'sepo_form')); // phpcs:ignore WordPress.DB
-foreach ($ids as $id) {
-    wp_delete_post((int) $id, true);
-}
-$wpdb->query("DROP TABLE IF EXISTS {$wpdb->prefix}sepo_form_submissions"); // phpcs:ignore WordPress.DB
-
-$uploads = wp_upload_dir(null, false);
-$dir = trailingslashit($uploads['basedir']) . 'sepo-forms-private';
-if (is_dir($dir)) {
-    $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS), RecursiveIteratorIterator::CHILD_FIRST);
-    foreach ($it as $f) {
-        $f->isDir() ? @rmdir($f->getPathname()) : @unlink($f->getPathname());
+    if (!$delete) {
+        return;
     }
-    @rmdir($dir);
+
+    $ids = $wpdb->get_col($wpdb->prepare("SELECT ID FROM {$wpdb->posts} WHERE post_type = %s", 'sepo_form')); // phpcs:ignore WordPress.DB
+    foreach ($ids as $id) {
+        wp_delete_post((int) $id, true);
+    }
+    $wpdb->query("DROP TABLE IF EXISTS {$wpdb->prefix}sepo_form_submissions"); // phpcs:ignore WordPress.DB
+
+    $uploads = wp_upload_dir(null, false);
+    $dir = trailingslashit($uploads['basedir']) . 'sepo-forms-private';
+    if (is_dir($dir)) {
+        require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-base.php';
+        require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-direct.php';
+        (new WP_Filesystem_Direct(null))->delete($dir, true);
+    }
+
+    $page = is_array($settings) ? (int) ($settings['index_page'] ?? 0) : 0;
+    if ($page > 0 && str_contains((string) get_post_field('post_content', $page), '[sepo_forms')) {
+        wp_delete_post($page, true);
+    }
+
+    delete_option('sepo_forms_settings');
+    delete_option('sepo_forms_version');
 }
 
-$page = is_array($settings) ? (int) ($settings['index_page'] ?? 0) : 0;
-if ($page > 0 && str_contains((string) get_post_field('post_content', $page), '[sepo_forms')) {
-    wp_delete_post($page, true);
-}
-
-delete_option('sepo_forms_settings');
-delete_option('sepo_forms_version');
+sepo_forms_uninstall();

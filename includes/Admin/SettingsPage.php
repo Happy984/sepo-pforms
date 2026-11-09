@@ -116,7 +116,7 @@ final class SettingsPage
         if (!empty($_POST['google_forget'])) {
             GoogleSettings::forget();
         }
-        // phpcs:enable
+        // phpcs:enable WordPress.Security.NonceVerification
         wp_safe_redirect(add_query_arg(['post_type' => PostType::TYPE, 'page' => self::SLUG, 'updated' => 1], admin_url('edit.php')));
         exit;
     }

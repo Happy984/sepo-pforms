@@ -516,7 +516,7 @@ final class FormDefinition
     {
         $text = str_replace(["\r\n", "\r"], "\n", $text);
         $text = (string) preg_replace('/^\xEF\xBB\xBF/', '', $text);
-        $text = html_entity_decode(strip_tags($text), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+        $text = html_entity_decode(wp_strip_all_tags($text, false), ENT_QUOTES | ENT_HTML5, 'UTF-8');
 
         $lookup = [];
         foreach (self::ALIASES as $concept => $spellings) {

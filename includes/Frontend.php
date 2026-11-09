@@ -71,7 +71,9 @@ final class Frontend
             // Only signed-in visitors get a nonce: a cached page would carry a stale one for guests.
             'nonce' => is_user_logged_in() ? wp_create_nonce('wp_rest') : '',
             'i18n'  => [
+                /* translators: %1$d: number, %2$d: number. */
                 'step'          => __('Step %1$d of %2$d', 'sepo-forms'),
+                /* translators: %s: value. */
                 'next'          => __('Next: %s', 'sepo-forms'),
                 'last'          => __('Last step', 'sepo-forms'),
                 'required'      => __('This question is required.', 'sepo-forms'),
@@ -80,6 +82,7 @@ final class Frontend
                 'email'         => __('Please enter a valid email address.', 'sepo-forms'),
                 'url'           => __('Please enter a valid web address.', 'sepo-forms'),
                 'number'        => __('Please enter a number.', 'sepo-forms'),
+                /* translators: %d: number. */
                 'tooBig'        => __('This file is larger than %d MB.', 'sepo-forms'),
                 'chooseFile'    => __('Choose a file or drag it here', 'sepo-forms'),
                 'submitting'    => __('Submitting…', 'sepo-forms'),
@@ -93,6 +96,7 @@ final class Frontend
                 'loadFail'      => __('Could not load this tab:', 'sepo-forms'),
                 'search'        => __('Search submissions…', 'sepo-forms'),
                 'noMatch'       => __('No submissions match your search.', 'sepo-forms'),
+                /* translators: %1$d: number, %2$d: number, %3$d: number. */
                 'showing'       => __('Showing %1$d–%2$d of %3$d', 'sepo-forms'),
                 'none'          => __('No entries', 'sepo-forms'),
                 'prev'          => __('Previous', 'sepo-forms'),
@@ -125,6 +129,7 @@ final class Frontend
                 'signIn'        => __('Sign-in', 'sepo-forms'),
                 'openForm'      => __('Open form', 'sepo-forms'),
                 'noForms'       => __('No matching forms.', 'sepo-forms'),
+                /* translators: %d: number. */
                 'questionsN'    => __('%d questions', 'sepo-forms'),
                 'files'         => __('Files', 'sepo-forms'),
             ],
@@ -161,7 +166,7 @@ final class Frontend
         try {
             $html = Manager::shell($form, ['showTitle' => $opts['showTitle'] ?? true, 'alreadySubmitted' => $already]);
         } catch (\Throwable $e) {
-            error_log('[sepo-forms] render: ' . $e->getMessage());
+            do_action('sepo_forms_render_error', $e, $formId);
             $html = '<div class="sf-error">' . esc_html__('This form could not be shown. Please try again later.', 'sepo-forms') . '</div>';
         }
         return '<div class="sf-scope">' . $html . '</div>';

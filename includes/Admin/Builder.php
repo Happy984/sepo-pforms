@@ -98,6 +98,7 @@ final class Builder
                 'importedNote'  => __('Imported. Review the questions, then update the form to save.', 'sepo-forms'),
                 'nothing'       => __('No questions were found in that text.', 'sepo-forms'),
                 'answersKept'   => __('Answers are stored by question, so editing a question keeps its responses. Deleting it hides them.', 'sepo-forms'),
+                /* translators: %d: number. */
                 'qCount'        => __('%d questions', 'sepo-forms'),
             ],
         ]) . ';', 'before');

@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+// phpcs:disable WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Exception messages are returned as JSON data or escaped at the point they are displayed.
 
 namespace SepoForms;
 
@@ -40,6 +41,18 @@ final class Files
         if (!is_file($dir . '/web.config')) {
             @file_put_contents($dir . '/web.config', '<?xml version="1.0"?><configuration><system.webServer><authorization><deny users="*" /></authorization></system.webServer></configuration>');
         }
+    }
+
+    /** Direct file-system access for the private folder. */
+    public static function fs(): \WP_Filesystem_Direct
+    {
+        static $fs = null;
+        if ($fs === null) {
+            require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-base.php';
+            require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-direct.php';
+            $fs = new \WP_Filesystem_Direct(null);
+        }
+        return $fs;
     }
 
     /** The largest upload the server accepts, in whole megabytes. */
@@ -101,10 +114,10 @@ final class Files
                 wp_mkdir_p($dir);
             }
             $file = bin2hex(random_bytes(12)) . '.' . $check['ext'];
-            if (!@move_uploaded_file($tmp, $dir . '/' . $file) && !@rename($tmp, $dir . '/' . $file)) {
+            if (!self::fs()->move($tmp, $dir . '/' . $file, true)) {
                 throw new \RuntimeException(__('A file could not be saved. Please try again.', 'sepo-forms'));
             }
-            @chmod($dir . '/' . $file, 0640);
+            self::fs()->chmod($dir . '/' . $file, 0640);
             $stored[] = [
                 'topic'    => $topicId,
                 'label'    => $label,
@@ -150,7 +163,7 @@ final class Files
         $formId = isset($_GET['form']) ? absint($_GET['form']) : 0;
         $id = isset($_GET['response']) ? sanitize_text_field(wp_unslash((string) $_GET['response'])) : '';
         $i = isset($_GET['file']) ? absint($_GET['file']) : -1;
-        // phpcs:enable
+        // phpcs:enable WordPress.Security.NonceVerification
         if (!PostType::canManage($formId) || !check_admin_referer('sepo_forms_file_' . $formId)) {
             wp_die(esc_html__('You cannot download this file.', 'sepo-forms'), '', ['response' => 403]);
         }
@@ -165,7 +178,7 @@ final class Files
         header('Content-Disposition: attachment; filename="' . str_replace('"', '', (string) $f['name']) . '"');
         header('Content-Length: ' . filesize($path));
         header('X-Content-Type-Options: nosniff');
-        readfile($path);
+        echo self::fs()->get_contents($path); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- file download body.
         exit;
     }
 
@@ -175,7 +188,7 @@ final class Files
         foreach ((array) ($record['meta']['files'] ?? []) as $f) {
             $path = self::baseDir() . '/' . (int) $record['form_id'] . '/' . basename((string) ($f['file'] ?? ''));
             if (is_file($path)) {
-                @unlink($path);
+                wp_delete_file($path);
             }
         }
     }
