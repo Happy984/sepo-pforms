@@ -1,0 +1,1426 @@
+# Copyright (C) 2026 Euneolink Solutions
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Sepo Forms 1.0.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/sepo-forms\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-08T13:04:48+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: sepo-forms\n"
+
+#. Plugin Name of the plugin
+#: sepo-forms.php
+msgid "Sepo Forms"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: sepo-forms.php
+msgid "https://edu.sepodesk.com/"
+msgstr ""
+
+#. Description of the plugin
+#: sepo-forms.php
+msgid "Multi-step forms with sections, required questions, guest or signed-in submissions, file uploads, response analytics, a searchable submissions table with CSV export, and one-click copy to Google Forms. Runs on WordPress alone."
+msgstr ""
+
+#. Author of the plugin
+#: sepo-forms.php
+msgid "Euneolink Solutions"
+msgstr ""
+
+#: includes/Admin/Builder.php:32
+msgid "Form title"
+msgstr ""
+
+#: includes/Admin/Builder.php:64
+msgid "Section"
+msgstr ""
+
+#: includes/Admin/Builder.php:65
+msgid "Section title"
+msgstr ""
+
+#: includes/Admin/Builder.php:66
+msgid "Instruction for this section (optional)"
+msgstr ""
+
+#: includes/Admin/Builder.php:67
+msgid "Leave empty to use the first step title from the settings."
+msgstr ""
+
+#: includes/Admin/Builder.php:68
+msgid "Add question"
+msgstr ""
+
+#: includes/Admin/Builder.php:69
+msgid "Add section"
+msgstr ""
+
+#: includes/Admin/Builder.php:70
+msgid "Question"
+msgstr ""
+
+#: includes/Admin/Builder.php:71
+msgid "Type the question"
+msgstr ""
+
+#: includes/Admin/Builder.php:72
+msgid "Type"
+msgstr ""
+
+#: includes/Admin/Builder.php:73
+msgid "Required"
+msgstr ""
+
+#: includes/Admin/Builder.php:74
+msgid "Choices, one per line"
+msgstr ""
+
+#: includes/Admin/Builder.php:75
+msgid "Help text"
+msgstr ""
+
+#: includes/Admin/Builder.php:76
+msgid "Placeholder"
+msgstr ""
+
+#: includes/Admin/Builder.php:77
+msgid "Image"
+msgstr ""
+
+#: includes/Admin/Builder.php:78
+msgid "Choose image"
+msgstr ""
+
+#: includes/Admin/Builder.php:79
+msgid "Remove image"
+msgstr ""
+
+#: includes/Admin/Builder.php:80
+msgid "More options"
+msgstr ""
+
+#: includes/Admin/Builder.php:81
+msgid "Move up"
+msgstr ""
+
+#: includes/Admin/Builder.php:82
+msgid "Move down"
+msgstr ""
+
+#: includes/Admin/Builder.php:83
+msgid "Duplicate"
+msgstr ""
+
+#: includes/Admin/Builder.php:84
+msgid "Delete"
+msgstr ""
+
+#: includes/Admin/Builder.php:85
+msgid "Delete section"
+msgstr ""
+
+#: includes/Admin/Builder.php:86
+msgid "Delete this section and its questions?"
+msgstr ""
+
+#: includes/Admin/Builder.php:87
+msgid "No questions yet. Add one, start from a template, or import a form written as text."
+msgstr ""
+
+#: includes/Admin/Builder.php:88
+msgid "Start from a template"
+msgstr ""
+
+#: includes/Admin/Builder.php:89
+msgid "Import from text"
+msgstr ""
+
+#: includes/Admin/Builder.php:90
+msgid "Copy as text"
+msgstr ""
+
+#: includes/Admin/Builder.php:91
+msgid "Copied"
+msgstr ""
+
+#: includes/Admin/Builder.php:92
+msgid "Import a form written as text"
+msgstr ""
+
+#: includes/Admin/Builder.php:93
+msgid "Paste lines such as \"question1: Your name\" and \"questionType1: email\". Front matter at the top (title, requireLogin, …) is read too. The questions replace the ones in the builder."
+msgstr ""
+
+#: includes/Admin/Builder.php:94
+msgid "Import"
+msgstr ""
+
+#: includes/Admin/Builder.php:95
+#: includes/Frontend.php:113
+msgid "Cancel"
+msgstr ""
+
+#: includes/Admin/Builder.php:96
+msgid "Use this template"
+msgstr ""
+
+#: includes/Admin/Builder.php:97
+msgid "Blank form"
+msgstr ""
+
+#: includes/Admin/Builder.php:98
+msgid "Imported. Review the questions, then update the form to save."
+msgstr ""
+
+#: includes/Admin/Builder.php:99
+msgid "No questions were found in that text."
+msgstr ""
+
+#: includes/Admin/Builder.php:100
+msgid "Answers are stored by question, so editing a question keeps its responses. Deleting it hides them."
+msgstr ""
+
+#. translators: %d: number.
+#: includes/Admin/Builder.php:102
+#: includes/Frontend.php:133
+msgid "%d questions"
+msgstr ""
+
+#: includes/Admin/Builder.php:110
+#: includes/PostType.php:78
+#: includes/Render/Manager.php:301
+msgid "Questions"
+msgstr ""
+
+#: includes/Admin/Builder.php:111
+#: includes/Render/Manager.php:305
+msgid "File uploads"
+msgstr ""
+
+#: includes/Admin/Builder.php:112
+msgid "Form settings"
+msgstr ""
+
+#: includes/Admin/Builder.php:113
+msgid "Use this form"
+msgstr ""
+
+#: includes/Admin/Builder.php:120
+msgid "Description"
+msgstr ""
+
+#: includes/Admin/Builder.php:121
+msgid "Shown under the title at the top of the form."
+msgstr ""
+
+#: includes/Admin/Builder.php:123
+msgid "Loading the builder…"
+msgstr ""
+
+#: includes/Admin/Builder.php:132
+msgid "Let people attach files to their response"
+msgstr ""
+
+#: includes/Admin/Builder.php:134
+msgid "Heading"
+msgstr ""
+
+#: includes/Admin/Builder.php:134
+#: includes/Render/FormView.php:191
+msgid "Attach files"
+msgstr ""
+
+#: includes/Admin/Builder.php:135
+msgid "Largest file (MB)"
+msgstr ""
+
+#. translators: %d: MB
+#: includes/Admin/Builder.php:136
+msgid "This server accepts up to %d MB."
+msgstr ""
+
+#. translators: %d: MB
+#: includes/Admin/Builder.php:137
+msgid "Instructions"
+msgstr ""
+
+#: includes/Admin/Builder.php:138
+msgid "Upload slots, one per line"
+msgstr ""
+
+#: includes/Admin/Builder.php:138
+msgid ""
+"CV | Required\n"
+"Cover letter"
+msgstr ""
+
+#: includes/Admin/Builder.php:139
+msgid "Each line is one file people can attach: a label, then optionally | and a short tag shown beside it. Files are stored privately; only people who can edit this form can download them."
+msgstr ""
+
+#: includes/Admin/Builder.php:156
+msgid "Closed — stop taking responses"
+msgstr ""
+
+#: includes/Admin/Builder.php:157
+msgid "Only signed-in people can answer"
+msgstr ""
+
+#: includes/Admin/Builder.php:158
+msgid "Allow more than one response per person"
+msgstr ""
+
+#: includes/Admin/Builder.php:158
+msgid "Applies to signed-in people."
+msgstr ""
+
+#: includes/Admin/Builder.php:159
+msgid "Ask guests for their email"
+msgstr ""
+
+#: includes/Admin/Builder.php:160
+msgid "Private — only editors can open it"
+msgstr ""
+
+#: includes/Admin/Builder.php:165
+#: includes/Render/Manager.php:303
+msgid "Submit button"
+msgstr ""
+
+#: includes/Admin/Builder.php:166
+msgid "Thank-you message"
+msgstr ""
+
+#: includes/Admin/Builder.php:167
+msgid "Or send people to this address"
+msgstr ""
+
+#: includes/Admin/Builder.php:168
+msgid "First step title"
+msgstr ""
+
+#: includes/Admin/Builder.php:169
+msgid "Order in the forms list"
+msgstr ""
+
+#: includes/Admin/Builder.php:169
+msgid "Higher numbers come first."
+msgstr ""
+
+#: includes/Admin/Builder.php:179
+msgid "response"
+msgid_plural "responses"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Admin/Builder.php:181
+msgid "View responses"
+msgstr ""
+
+#: includes/Admin/Builder.php:183
+#: includes/Frontend.php:104
+msgid "Export CSV"
+msgstr ""
+
+#: includes/Admin/Builder.php:187
+msgid "Put it in any page, post or Elementor shortcode widget:"
+msgstr ""
+
+#: includes/Admin/Builder.php:188
+msgid "Copy"
+msgstr ""
+
+#: includes/Admin/Builder.php:189
+msgid "In the block editor, add the \"Sepo form\" block. In Elementor, use the \"Sepo form\" widget."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:22
+#: includes/Admin/SettingsPage.php:37
+msgid "Forms settings"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:22
+#: includes/Admin/SubmissionsPage.php:66
+#: includes/Render/Manager.php:53
+msgid "Settings"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:39
+msgid "Settings saved."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:45
+msgid "Look and pages"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:47
+#: includes/Elementor/FormsListWidget.php:55
+#: includes/Elementor/FormWidget.php:66
+msgid "Accent colour"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:49
+msgid "Header strip, Next button, current step and tabs. Leave empty for the default dark teal."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:50
+msgid "Forms list page"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:51
+msgid "— None —"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:52
+msgid "The page that lists every form. Any page with the [sepo_forms] shortcode or the \"Sepo forms list\" block works."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:55
+#: includes/Admin/SubmissionsPage.php:67
+#: includes/Render/Manager.php:54
+msgid "Google Forms"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:56
+msgid "Connected"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:56
+msgid "Not connected"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:57
+msgid "One connection for the whole site. Form managers then get a \"Create on Google Forms\" button on each form's Google Forms tab."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:59
+msgid "In the Google Cloud console, enable the Google Forms API and the Google Drive API, and create an OAuth client of type \"Web application\"."
+msgstr ""
+
+#. translators: %s: URL
+#: includes/Admin/SettingsPage.php:60
+msgid "Add %s as an authorised redirect URI."
+msgstr ""
+
+#. translators: 1: scope, 2: scope
+#: includes/Admin/SettingsPage.php:61
+msgid "In the OAuth 2.0 Playground, use your own client, tick the scopes %1$s and %2$s, and exchange the code for a refresh token."
+msgstr ""
+
+#. translators: 1: scope, 2: scope
+#: includes/Admin/SettingsPage.php:62
+msgid "Paste the client ID, secret and refresh token below and switch the integration on."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:65
+msgid "Integration"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:66
+msgid "Show the \"Create on Google Forms\" button"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:67
+msgid "OAuth client ID"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:69
+msgid "OAuth client secret"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:71
+#: includes/Admin/SettingsPage.php:74
+msgid "Leave empty to keep the saved value."
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:72
+msgid "Refresh token"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:76
+msgid "Disconnect"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:77
+msgid "Remove the saved credentials and switch the integration off"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:81
+msgid "Uninstall"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:83
+msgid "Delete data"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:84
+msgid "When the plugin is deleted, also delete every form, response and uploaded file"
+msgstr ""
+
+#: includes/Admin/SettingsPage.php:95
+msgid "You cannot change these settings."
+msgstr ""
+
+#: includes/Admin/SubmissionsPage.php:27
+#: includes/Admin/SubmissionsPage.php:40
+#: includes/PostType.php:79
+#: includes/PostType.php:111
+#: includes/Render/Charts.php:97
+#: includes/Render/Charts.php:108
+#: includes/Render/Manager.php:93
+msgid "Responses"
+msgstr ""
+
+#: includes/Admin/SubmissionsPage.php:42
+msgid "Create a form first. Its responses will appear here."
+msgstr ""
+
+#: includes/Admin/SubmissionsPage.php:46
+#: includes/Elementor/FormWidget.php:62
+#: includes/Elementor/FormWidget.php:63
+#: includes/FormDefinition.php:318
+#: includes/PostType.php:39
+#: includes/Render/Manager.php:46
+#: assets/js/blocks.js:28
+#: assets/js/blocks.js:29
+msgid "Form"
+msgstr ""
+
+#: includes/Admin/SubmissionsPage.php:48
+msgid "(no title)"
+msgstr ""
+
+#: includes/Admin/SubmissionsPage.php:50
+msgid "Show"
+msgstr ""
+
+#: includes/Admin/SubmissionsPage.php:52
+#: includes/PostType.php:42
+msgid "Edit form"
+msgstr ""
+
+#: includes/Admin/SubmissionsPage.php:53
+#: includes/PostType.php:44
+msgid "View form"
+msgstr ""
+
+#: includes/Admin/SubmissionsPage.php:57
+msgid "You cannot view the responses to this form."
+msgstr ""
+
+#: includes/Admin/SubmissionsPage.php:65
+#: includes/Render/Manager.php:48
+msgid "Submissions"
+msgstr ""
+
+#: includes/Elementor/FormsListWidget.php:23
+#: includes/Embeds.php:46
+#: assets/js/blocks.js:44
+msgid "Sepo forms list"
+msgstr ""
+
+#: includes/Elementor/FormsListWidget.php:51
+#: includes/Elementor/FormsListWidget.php:53
+#: includes/Render/Index.php:63
+#: assets/js/blocks.js:54
+#: assets/js/blocks.js:56
+msgid "List"
+msgstr ""
+
+#: includes/Elementor/FormsListWidget.php:52
+#: assets/js/blocks.js:55
+msgid "Forms per page"
+msgstr ""
+
+#: includes/Elementor/FormsListWidget.php:53
+#: includes/Render/Index.php:61
+#: assets/js/blocks.js:56
+msgid "Layout"
+msgstr ""
+
+#: includes/Elementor/FormsListWidget.php:53
+#: includes/Render/Index.php:62
+#: assets/js/blocks.js:56
+msgid "Grid"
+msgstr ""
+
+#: includes/Elementor/FormWidget.php:24
+#: includes/Embeds.php:34
+#: assets/js/blocks.js:17
+#: assets/js/blocks.js:34
+msgid "Sepo form"
+msgstr ""
+
+#: includes/Elementor/FormWidget.php:58
+#: assets/js/blocks.js:26
+msgid "Choose a form…"
+msgstr ""
+
+#: includes/Elementor/FormWidget.php:64
+#: assets/js/blocks.js:30
+msgid "Show the form title"
+msgstr ""
+
+#: includes/Elementor/FormWidget.php:71
+msgid "Largest width"
+msgstr ""
+
+#: includes/Elementor/FormWidget.php:86
+msgid "Choose a form in the widget settings."
+msgstr ""
+
+#: includes/Embeds.php:20
+msgid "Sepo forms"
+msgstr ""
+
+#. translators: %s: upload slot
+#: includes/Files.php:97
+msgid "The file for \"%s\" did not upload. Please try again."
+msgstr ""
+
+#. translators: 1: upload slot, 2: size in MB
+#: includes/Files.php:103
+msgid "The file for \"%1$s\" is larger than %2$d MB."
+msgstr ""
+
+#: includes/Files.php:106
+msgid "A file could not be read."
+msgstr ""
+
+#. translators: %s: upload slot
+#: includes/Files.php:111
+msgid "The file for \"%s\" is not a type this site accepts."
+msgstr ""
+
+#: includes/Files.php:118
+msgid "A file could not be saved. Please try again."
+msgstr ""
+
+#: includes/Files.php:168
+msgid "You cannot download this file."
+msgstr ""
+
+#: includes/Files.php:174
+msgid "The file is no longer available."
+msgstr ""
+
+#: includes/FormDefinition.php:87
+msgid "Submit"
+msgstr ""
+
+#: includes/FormDefinition.php:88
+#: includes/Rest.php:102
+msgid "Thanks — your response has been recorded."
+msgstr ""
+
+#: includes/FormDefinition.php:90
+msgid "Details"
+msgstr ""
+
+#: includes/FormDefinition.php:208
+msgid "Short text"
+msgstr ""
+
+#: includes/FormDefinition.php:209
+msgid "Paragraph"
+msgstr ""
+
+#: includes/FormDefinition.php:210
+msgid "Multiple choice"
+msgstr ""
+
+#: includes/FormDefinition.php:211
+msgid "Checkboxes"
+msgstr ""
+
+#: includes/FormDefinition.php:212
+msgid "Number"
+msgstr ""
+
+#: includes/FormDefinition.php:213
+msgid "Date"
+msgstr ""
+
+#: includes/FormDefinition.php:214
+#: includes/Submissions.php:264
+msgid "Email"
+msgstr ""
+
+#: includes/FormDefinition.php:215
+msgid "Phone"
+msgstr ""
+
+#: includes/FormDefinition.php:216
+msgid "URL"
+msgstr ""
+
+#. translators: %d: section number
+#: includes/FormDefinition.php:388
+#: includes/Google/Client.php:72
+msgid "Section %d"
+msgstr ""
+
+#: includes/FormDefinition.php:412
+#: includes/Frontend.php:79
+msgid "This question is required."
+msgstr ""
+
+#: includes/FormDefinition.php:422
+#: includes/Frontend.php:82
+#: includes/Rest.php:141
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: includes/FormDefinition.php:427
+#: includes/Frontend.php:83
+msgid "Please enter a valid web address."
+msgstr ""
+
+#: includes/FormDefinition.php:432
+#: includes/Frontend.php:84
+msgid "Please enter a number."
+msgstr ""
+
+#: includes/FormDefinition.php:437
+msgid "Please enter a date."
+msgstr ""
+
+#: includes/FormDefinition.php:442
+msgid "Please choose one of the options."
+msgstr ""
+
+#: includes/FormDefinition.php:448
+msgid "Please choose from the options."
+msgstr ""
+
+#. translators: %1$d: number, %2$d: number.
+#. translators: 1: step number, 2: number of steps
+#: includes/Frontend.php:75
+#: includes/Render/FormView.php:86
+msgid "Step %1$d of %2$d"
+msgstr ""
+
+#. translators: %s: value.
+#. translators: %s: next step title
+#: includes/Frontend.php:77
+#: includes/Render/FormView.php:88
+msgid "Next: %s"
+msgstr ""
+
+#: includes/Frontend.php:78
+msgid "Last step"
+msgstr ""
+
+#: includes/Frontend.php:80
+msgid "Please answer the required questions before continuing."
+msgstr ""
+
+#: includes/Frontend.php:81
+msgid "Please answer the required questions before submitting."
+msgstr ""
+
+#. translators: %d: number.
+#: includes/Frontend.php:86
+msgid "This file is larger than %d MB."
+msgstr ""
+
+#: includes/Frontend.php:87
+#: includes/Render/FormView.php:204
+msgid "Choose a file or drag it here"
+msgstr ""
+
+#: includes/Frontend.php:88
+msgid "Submitting…"
+msgstr ""
+
+#: includes/Frontend.php:89
+#: includes/Render/Manager.php:125
+#: includes/Submissions.php:264
+msgid "Submitted"
+msgstr ""
+
+#: includes/Frontend.php:90
+msgid "Your response has been recorded."
+msgstr ""
+
+#: includes/Frontend.php:91
+msgid "Could not submit"
+msgstr ""
+
+#: includes/Frontend.php:92
+msgid "Please try again."
+msgstr ""
+
+#: includes/Frontend.php:93
+msgid "Network error. Check your connection and try again."
+msgstr ""
+
+#: includes/Frontend.php:94
+msgid "You have unsaved answers. Leave anyway?"
+msgstr ""
+
+#: includes/Frontend.php:95
+msgid "Loading…"
+msgstr ""
+
+#: includes/Frontend.php:96
+msgid "Could not load this tab:"
+msgstr ""
+
+#: includes/Frontend.php:97
+msgid "Search submissions…"
+msgstr ""
+
+#: includes/Frontend.php:98
+msgid "No submissions match your search."
+msgstr ""
+
+#. translators: %1$d: number, %2$d: number, %3$d: number.
+#: includes/Frontend.php:100
+msgid "Showing %1$d–%2$d of %3$d"
+msgstr ""
+
+#: includes/Frontend.php:101
+msgid "No entries"
+msgstr ""
+
+#: includes/Frontend.php:102
+msgid "Previous"
+msgstr ""
+
+#: includes/Frontend.php:103
+#: includes/Render/FormView.php:133
+msgid "Next"
+msgstr ""
+
+#: includes/Frontend.php:105
+msgid "Download what is shown"
+msgstr ""
+
+#: includes/Frontend.php:106
+msgid "Download everything"
+msgstr ""
+
+#: includes/Frontend.php:107
+msgid "Columns"
+msgstr ""
+
+#: includes/Frontend.php:108
+msgid "View"
+msgstr ""
+
+#: includes/Frontend.php:109
+#: includes/Render/FormView.php:205
+msgid "Remove"
+msgstr ""
+
+#: includes/Frontend.php:110
+msgid "Actions"
+msgstr ""
+
+#: includes/Frontend.php:111
+msgid "Remove submission"
+msgstr ""
+
+#: includes/Frontend.php:112
+msgid "Are you sure you want to remove this submission? This action cannot be undone."
+msgstr ""
+
+#: includes/Frontend.php:114
+msgid "Close"
+msgstr ""
+
+#: includes/Frontend.php:115
+msgid "Response"
+msgstr ""
+
+#: includes/Frontend.php:116
+msgid "Submission removed."
+msgstr ""
+
+#: includes/Frontend.php:117
+msgid "Failed to remove the submission."
+msgstr ""
+
+#: includes/Frontend.php:118
+msgid "Building…"
+msgstr ""
+
+#: includes/Frontend.php:119
+msgid "Build another"
+msgstr ""
+
+#: includes/Frontend.php:120
+#: includes/Render/Manager.php:340
+msgid "Create on Google Forms"
+msgstr ""
+
+#: includes/Frontend.php:121
+msgid "Form created."
+msgstr ""
+
+#: includes/Frontend.php:122
+msgid "Open in the Google Forms editor"
+msgstr ""
+
+#: includes/Frontend.php:123
+msgid "Open the live form"
+msgstr ""
+
+#: includes/Frontend.php:124
+msgid "Skipped:"
+msgstr ""
+
+#: includes/Frontend.php:125
+msgid "Google refused the request."
+msgstr ""
+
+#: includes/Frontend.php:126
+#: includes/PostType.php:95
+#: includes/Render/Manager.php:296
+msgid "Open"
+msgstr ""
+
+#: includes/Frontend.php:127
+#: includes/PostType.php:95
+#: includes/Render/Manager.php:296
+msgid "Closed"
+msgstr ""
+
+#: includes/Frontend.php:128
+#: includes/PostType.php:97
+#: includes/Render/Manager.php:297
+msgid "Private"
+msgstr ""
+
+#: includes/Frontend.php:129
+#: includes/PostType.php:100
+msgid "Sign-in"
+msgstr ""
+
+#: includes/Frontend.php:130
+msgid "Open form"
+msgstr ""
+
+#: includes/Frontend.php:131
+msgid "No matching forms."
+msgstr ""
+
+#: includes/Frontend.php:134
+#: includes/Render/Manager.php:140
+#: includes/Rest.php:249
+#: includes/Submissions.php:268
+msgid "Files"
+msgstr ""
+
+#: includes/Frontend.php:170
+msgid "This form could not be shown. Please try again later."
+msgstr ""
+
+#: includes/Frontend.php:202
+msgid "Choose a form: [sepo_form id=\"…\"]"
+msgstr ""
+
+#: includes/Google/Client.php:43
+msgid "Google refused the stored credentials. Reconnect the integration under Forms → Settings."
+msgstr ""
+
+#: includes/Google/Client.php:46
+msgid "Untitled form"
+msgstr ""
+
+#: includes/Google/Client.php:55
+msgid "Google returned no form ID for the new form."
+msgstr ""
+
+#. translators: %s: question
+#: includes/Google/Client.php:82
+msgid "%s (type not supported by the API)"
+msgstr ""
+
+#. translators: %s: error
+#: includes/Google/Client.php:120
+msgid "Could not reach Google. %s"
+msgstr ""
+
+#. translators: %d: HTTP status
+#: includes/Google/Client.php:128
+msgid "Google returned HTTP %d."
+msgstr ""
+
+#: includes/PostType.php:38
+#: includes/PostType.php:50
+#: includes/Settings.php:80
+msgid "Forms"
+msgstr ""
+
+#: includes/PostType.php:40
+#: includes/PostType.php:41
+msgid "Add form"
+msgstr ""
+
+#: includes/PostType.php:43
+msgid "New form"
+msgstr ""
+
+#: includes/PostType.php:45
+msgid "View forms"
+msgstr ""
+
+#: includes/PostType.php:46
+#: includes/Render/Index.php:60
+msgid "Search forms"
+msgstr ""
+
+#: includes/PostType.php:47
+msgid "No forms found."
+msgstr ""
+
+#: includes/PostType.php:48
+msgid "No forms in the bin."
+msgstr ""
+
+#: includes/PostType.php:49
+msgid "All forms"
+msgstr ""
+
+#: includes/PostType.php:77
+#: includes/Render/Manager.php:296
+msgid "Status"
+msgstr ""
+
+#: includes/Render/Charts.php:27
+msgid "No data"
+msgstr ""
+
+#: includes/Render/Charts.php:31
+msgid "Response distribution"
+msgstr ""
+
+#: includes/Render/Charts.php:42
+msgid "responses"
+msgstr ""
+
+#: includes/Render/Charts.php:54
+#: includes/Render/Manager.php:263
+msgid "No responses yet."
+msgstr ""
+
+#: includes/Render/Charts.php:91
+msgid "No numeric responses yet."
+msgstr ""
+
+#: includes/Render/Charts.php:94
+msgid "Average"
+msgstr ""
+
+#: includes/Render/Charts.php:95
+msgid "Min"
+msgstr ""
+
+#: includes/Render/Charts.php:96
+msgid "Max"
+msgstr ""
+
+#: includes/Render/Charts.php:105
+msgid "No date responses yet."
+msgstr ""
+
+#: includes/Render/Charts.php:109
+msgid "Earliest"
+msgstr ""
+
+#: includes/Render/Charts.php:110
+#: includes/Render/Manager.php:97
+msgid "Latest"
+msgstr ""
+
+#: includes/Render/Charts.php:117
+msgid "text response"
+msgid_plural "text responses"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Render/Charts.php:118
+msgid "Switch to Individual to read them."
+msgstr ""
+
+#: includes/Render/FormView.php:28
+#: includes/Rest.php:295
+msgid "This form has no questions yet."
+msgstr ""
+
+#: includes/Render/FormView.php:39
+msgid "This form is closed and is no longer accepting responses."
+msgstr ""
+
+#: includes/Render/FormView.php:41
+#: includes/Rest.php:127
+msgid "You have already submitted this form."
+msgstr ""
+
+#. translators: %d: number of questions
+#: includes/Render/FormView.php:62
+#: includes/Render/Manager.php:317
+msgid "%d question"
+msgid_plural "%d questions"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of steps
+#: includes/Render/FormView.php:64
+msgid "%d step"
+msgid_plural "%d steps"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Render/FormView.php:66
+msgid "Manager"
+msgstr ""
+
+#: includes/Render/FormView.php:115
+msgid "Your email"
+msgstr ""
+
+#: includes/Render/FormView.php:127
+msgid "Leave this empty"
+msgstr ""
+
+#: includes/Render/FormView.php:131
+msgid "Back"
+msgstr ""
+
+#. translators: %d: size in MB
+#: includes/Render/FormView.php:196
+msgid "Up to %d MB per file."
+msgstr ""
+
+#: includes/Render/Gate.php:37
+msgid "Log in"
+msgstr ""
+
+#: includes/Render/Gate.php:39
+msgid "Create an account"
+msgstr ""
+
+#: includes/Render/Gate.php:42
+#: includes/Render/Manager.php:298
+msgid "Sign-in required"
+msgstr ""
+
+#: includes/Render/Gate.php:43
+msgid "Please log in to fill out this form."
+msgstr ""
+
+#: includes/Render/Gate.php:51
+msgid "Not enough permissions"
+msgstr ""
+
+#: includes/Render/Gate.php:52
+msgid "This form is private. You do not have permission to open it."
+msgstr ""
+
+#: includes/Render/Gate.php:54
+msgid "Go to the home page"
+msgstr ""
+
+#: includes/Render/Index.php:53
+msgid "There are no forms to fill in at the moment."
+msgstr ""
+
+#: includes/Render/Index.php:60
+msgid "Search forms…"
+msgstr ""
+
+#: includes/Render/Manager.php:63
+msgid "Loading submissions…"
+msgstr ""
+
+#: includes/Render/Manager.php:89
+msgid "No submissions yet."
+msgstr ""
+
+#: includes/Render/Manager.php:94
+msgid "Signed-in users"
+msgstr ""
+
+#: includes/Render/Manager.php:95
+msgid "Guests"
+msgstr ""
+
+#: includes/Render/Manager.php:105
+msgid "Summary"
+msgstr ""
+
+#: includes/Render/Manager.php:106
+msgid "Individual"
+msgstr ""
+
+#: includes/Render/Manager.php:126
+#: includes/Submissions.php:264
+msgid "Respondent"
+msgstr ""
+
+#. translators: 1: answered count, 2: total responses
+#: includes/Render/Manager.php:281
+msgid "%1$d/%2$d answered"
+msgstr ""
+
+#: includes/Render/Manager.php:284
+msgid "Nothing to summarise yet."
+msgstr ""
+
+#: includes/Render/Manager.php:293
+msgid "Yes"
+msgstr ""
+
+#: includes/Render/Manager.php:293
+msgid "No"
+msgstr ""
+
+#: includes/Render/Manager.php:295
+msgid "Title"
+msgstr ""
+
+#: includes/Render/Manager.php:297
+msgid "Visibility"
+msgstr ""
+
+#: includes/Render/Manager.php:297
+msgid "Public"
+msgstr ""
+
+#: includes/Render/Manager.php:299
+msgid "Collect email (guests)"
+msgstr ""
+
+#: includes/Render/Manager.php:300
+msgid "Multiple submissions"
+msgstr ""
+
+#: includes/Render/Manager.php:302
+msgid "Steps"
+msgstr ""
+
+#: includes/Render/Manager.php:304
+msgid "After submitting"
+msgstr ""
+
+#: includes/Render/Manager.php:305
+msgid "Off"
+msgstr ""
+
+#: includes/Render/Manager.php:313
+msgid "Sections"
+msgstr ""
+
+#: includes/Render/Manager.php:323
+msgid "Change the questions and settings in the form builder."
+msgstr ""
+
+#: includes/Render/Manager.php:324
+msgid "Edit this form"
+msgstr ""
+
+#: includes/Render/Manager.php:338
+msgid "Copy this form to Google Forms"
+msgstr ""
+
+#: includes/Render/Manager.php:339
+msgid "Builds the same questions, sections and section instructions in your Google account as a new form. Google Forms cannot take file uploads through its API, so upload slots are skipped — you will be told which, if any."
+msgstr ""
+
+#: includes/Render/Manager.php:342
+msgid "The connection is set up once for the whole site, under"
+msgstr ""
+
+#: includes/Render/Manager.php:342
+#: includes/Render/Manager.php:347
+msgid "Forms → Settings"
+msgstr ""
+
+#: includes/Render/Manager.php:344
+msgid "Google Forms is not connected"
+msgstr ""
+
+#: includes/Render/Manager.php:345
+msgid "The connection is set up once for the whole site, not per form."
+msgstr ""
+
+#: includes/Render/Manager.php:347
+msgid "Add the OAuth client and refresh token under"
+msgstr ""
+
+#: includes/Render/Manager.php:347
+msgid "switch the integration on there, and this button appears."
+msgstr ""
+
+#: includes/Render/Manager.php:348
+msgid "Ask a site administrator to connect it."
+msgstr ""
+
+#: includes/Rest.php:85
+#: includes/Rest.php:98
+msgid "Form not found."
+msgstr ""
+
+#: includes/Rest.php:107
+msgid "Too many responses from your connection. Please wait a few minutes and try again."
+msgstr ""
+
+#: includes/Rest.php:115
+msgid "This form has no questions."
+msgstr ""
+
+#: includes/Rest.php:118
+msgid "This form is private."
+msgstr ""
+
+#: includes/Rest.php:121
+msgid "This form is closed and no longer accepting responses."
+msgstr ""
+
+#: includes/Rest.php:124
+msgid "You must be logged in to submit this form."
+msgstr ""
+
+#: includes/Rest.php:144
+msgid "Please fix the highlighted questions and try again."
+msgstr ""
+
+#: includes/Rest.php:182
+msgid "Form and submission ID are required."
+msgstr ""
+
+#: includes/Rest.php:185
+#: includes/Rest.php:243
+msgid "Submission not found."
+msgstr ""
+
+#: includes/Rest.php:292
+msgid "Google Forms is not connected. Set it up under Forms → Settings."
+msgstr ""
+
+#: includes/Rest.php:299
+msgid "File upload slots (the Google Forms API cannot create them)"
+msgstr ""
+
+#: includes/Rest.php:303
+msgid "Google rejected the request."
+msgstr ""
+
+#: includes/Submissions.php:90
+msgid "Your response could not be saved. Please try again."
+msgstr ""
+
+#: includes/Submissions.php:215
+msgid "Guest"
+msgstr ""
+
+#: includes/Submissions.php:253
+msgid "You cannot export these responses."
+msgstr ""
+
+#: includes/Submissions.php:264
+msgid "Response ID"
+msgstr ""
+
+#: includes/Submissions.php:264
+msgid "User ID"
+msgstr ""
+
+#: includes/Templates.php:21
+msgid "Contact enquiry"
+msgstr ""
+
+#: includes/Templates.php:22
+msgid "Name, email, topic and message. A good first form for any site."
+msgstr ""
+
+#: includes/Templates.php:26
+msgid "Course feedback (education)"
+msgstr ""
+
+#: includes/Templates.php:27
+msgid "End-of-course survey with ratings, what worked and what to improve."
+msgstr ""
+
+#: includes/Templates.php:31
+msgid "Expense claim (finance)"
+msgstr ""
+
+#: includes/Templates.php:32
+msgid "Staff expense claim with amount, date, category and a receipt upload."
+msgstr ""
+
+#: includes/Templates.php:36
+msgid "Job application (business)"
+msgstr ""
+
+#: includes/Templates.php:37
+msgid "Applicant details, experience and CV upload."
+msgstr ""
+
+#: includes/Templates.php:41
+msgid "Team registration (sports)"
+msgstr ""
+
+#: includes/Templates.php:42
+msgid "Player sign-up with position, emergency contact and consent."
+msgstr ""
+
+#: includes/Templates.php:46
+msgid "Visitor card (church)"
+msgstr ""
+
+#: includes/Templates.php:47
+msgid "Welcome card for first-time visitors with interests and prayer requests."
+msgstr ""
+
+#: includes/Templates.php:51
+msgid "Event RSVP"
+msgstr ""
+
+#: includes/Templates.php:52
+msgid "Attendance, number of guests and dietary needs."
+msgstr ""
+
+#: sepo-forms.php:25
+msgid "Sepo Forms needs PHP 8.1 or newer. The plugin is installed but not running."
+msgstr ""
+
+#: assets/js/blocks.js:18
+msgid "Shows one of your forms."
+msgstr ""
+
+#: assets/js/blocks.js:21
+msgid "form"
+msgstr ""
+
+#: assets/js/blocks.js:21
+msgid "survey"
+msgstr ""
+
+#: assets/js/blocks.js:21
+msgid "feedback"
+msgstr ""
+
+#: assets/js/blocks.js:34
+msgid "Choose the form to show."
+msgstr ""
+
+#: assets/js/blocks.js:34
+msgid "Create a form under Forms → Add form first."
+msgstr ""
+
+#: assets/js/blocks.js:45
+msgid "Lists every form, with search and pages."
+msgstr ""
